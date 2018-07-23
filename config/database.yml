@@ -9,6 +9,8 @@ development:
   <<: *default
   database: portfolio_onebitcode_development
 
-test:
+test: &test
   <<: *default
   database: portfolio_onebitcode_test
+cucumber:
+  <<: *test
