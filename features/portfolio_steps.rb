@@ -20,4 +20,4 @@ Dado "possui {int} portfólio(s) cadastrado(s)" do |count|
   
   Então "volta para a página de login" do
     expect(page).to have_current_path("/users/sign_in")
-end
+end'
