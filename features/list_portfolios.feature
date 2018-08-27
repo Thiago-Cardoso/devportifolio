@@ -1,5 +1,5 @@
 # language:pt
-
+@javascript
 Funcionalidade: Listar Portfólios
   Portfólios do usuário são exibidos ao acessar a lista de portfólios
 
@@ -15,7 +15,7 @@ Funcionalidade: Listar Portfólios
   Cenário: Usuário logado e sem portfólios cadastrados
     E possui 0 portfólios cadastrados
     Quando acessa a lista de portfólios
-    Então os 0 portfólio são listado
+    Então nenhum portfólio é listado
 
 
   Cenário: Usuário não está logado
