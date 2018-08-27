@@ -36,4 +36,11 @@
         text-transform: capitalize;
       }
     }
+
+    .add-portfolio {
+      a.new-portfolio > img {
+        margin-top: 55%;
+        margin-bottom: 55%;
+      }
+    }
 }
