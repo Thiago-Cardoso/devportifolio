@@ -44,3 +44,19 @@
       }
     }
 }
+
+
+div.slug-actions {
+  margin-top: 4%;
+
+  .element {
+    margin-left: 5%;
+    font-size: 20px;
+    color: get-custom-color("custom-grey");
+
+    &:hover {
+      cursor: pointer;
+      color: get-custom-color("custom-grey", "darken-1");
+    }
+  }
+}
