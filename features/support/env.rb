@@ -1,6 +1,7 @@
 require 'cucumber/rails'
 require 'database_cleaner'
 require 'database_cleaner/cucumber'
+require './request_helper'
 
 # Include factory_bot methods
 World(FactoryBot::Syntax::Methods)
