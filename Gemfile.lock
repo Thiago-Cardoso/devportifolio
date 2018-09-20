@@ -253,7 +253,7 @@ DEPENDENCIES
   mini_magick
   pg (>= 0.18, < 2.0)
   puma (~> 3.11)
-  pundit
+  pundit (= 2.0)
   rails (~> 5.2.0)
   rspec-expectations (~> 3.4)
   sass-rails (~> 5.0)
