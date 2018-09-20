@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
     rescue_from Pundit::NotAuthorizedError do
         respond_to do |format|
           format.html { redirect_to root_path, flash: { error: 'Unauthorized' } }
-          format.json { render json: { error: 'Unauthorized' } }
+          format.json { render json: { errors: ['Unauthorized'] }, status: :unauthorized }
         end
       end
 
