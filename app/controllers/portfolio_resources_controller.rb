@@ -1,7 +1,7 @@
 class PortfolioResourcesController < ApplicationController
     before_action :load_portfolio
     
-    def index
+      def index
         @resources = load_portfolio_resources
         authorize @portfolio, policy_class: PortfolioResourcePolicy
         render_resource(@resources)
