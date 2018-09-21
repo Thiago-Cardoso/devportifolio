@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     resources :educations, only: [:index, :create, :destroy]
     resources :skills, only: [:index, :create, :destroy]
     resources :hobbies, only: [:index, :create, :destroy]
+    resources :languages, only: [:index, :create, :destroy]
   end
   resources :tags, only: :index
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
