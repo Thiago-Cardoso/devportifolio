@@ -29,19 +29,12 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-group :test do
-  gem 'cucumber-rails', require: false
-  gem 'database_cleaner'
-  gem 'selenium-webdriver', '~> 3.0'
-  gem 'rspec-expectations', '~> 3.4'
-end
-
 
 group :test do
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
   gem "factory_bot_rails", "~> 4.0"
-  gem 'selenium-webdriver', '~> 3.0'
+  gem 'selenium-webdriver', '~> 3.14'
   gem 'rspec-expectations', '~> 3.4'
 end
 

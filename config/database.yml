@@ -7,10 +7,10 @@ default: &default
 
 development:
   <<: *default
-  database: portfolio_onebitcode_development
+  database: portfolio_onebitcodet_development
 
 test: &test
   <<: *default
-  database: portfolio_onebitcode_test
+  database: portfolio_onebitcodet_test
 cucumber:
   <<: *test
