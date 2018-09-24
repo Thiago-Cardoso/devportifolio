@@ -15,6 +15,8 @@ class Block < ApplicationRecord
 
   before_validation :set_position, on: :create, unless: -> { self.position.present? }
 
+  has_one :additional_information, dependent: :delete
+
 
   private
 

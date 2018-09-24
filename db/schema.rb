@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_15_234817) do
+ActiveRecord::Schema.define(version: 2018_09_24_220608) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,6 +50,8 @@ ActiveRecord::Schema.define(version: 2018_08_15_234817) do
     t.bigint "portfolio_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "block_id"
+    t.index ["block_id"], name: "index_additional_informations_on_block_id"
     t.index ["portfolio_id"], name: "index_additional_informations_on_portfolio_id"
   end
 
@@ -190,6 +192,7 @@ ActiveRecord::Schema.define(version: 2018_08_15_234817) do
   end
 
   add_foreign_key "abouts", "portfolios"
+  add_foreign_key "additional_informations", "blocks"
   add_foreign_key "additional_informations", "portfolios"
   add_foreign_key "blocks", "portfolios"
   add_foreign_key "contacts", "portfolios"
