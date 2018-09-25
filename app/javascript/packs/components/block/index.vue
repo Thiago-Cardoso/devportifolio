@@ -138,11 +138,14 @@
         this.blockKinds = this[`${side}Kinds`]// put in list of kids
         this.modalInstance.open(); //open modal
       },
-      updateBlocks(blocks){
+     updateBlocks(blocks){
         let blocksToUpdate = blocks.map((block, index) => { return { id: block.id, position: index } })
         this.$http.patch(`/portfolios/${this.portfolioId}/blocks/positions`, { blocks: blocksToUpdate })
-            .then(response => {}, response => {
-              if(response.body.old_blocks) this.blocks = response.body.old_blocks
+          .then(
+            response => {},
+            response => {
+              if(response.body.old_blocks)
+                this.blocks = response.body.old_blocks
               M.toast({ html: "Ocorreu um erro ao atualizar as posições dos blocos", classes: "red" })
             })
       },
