@@ -14,5 +14,6 @@ class ContactFormsController < ApplicationController
     }).contact.deliver
  
     render json: :ok
+  
   end
 end
