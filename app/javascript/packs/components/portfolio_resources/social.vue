@@ -21,7 +21,7 @@
       <div class="col l12 m12 s12">
         <div class="row resource-item resource-social">
           <div class="col l10 m10 s10 valign-wrapper">
-            <img :src="`/assets/socials/${social.kind}.png`" width="12%" />
+            <img :src="`/socials/${social.kind}.png`" width="12%" />
             <a :href="social.url" target="_blank">{{ relativePath(social.url) }}</a>
           </div>
           <div class="col l1 m1 s1">

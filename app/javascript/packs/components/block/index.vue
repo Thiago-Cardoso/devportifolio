@@ -15,7 +15,7 @@
           </draggable>
             
             <div class="card-panel center">
-              <img src="/assets/add_portfolio.png" id="add-left-block" @click="openModalToAdd('left')" />
+              <img src="/add_portfolio.png" id="add-left-block" @click="openModalToAdd('left')" />
             </div>
         </div>
  
@@ -28,7 +28,7 @@
           </draggable>
 
             <div class="card-panel center">
-              <img src="/assets/add_portfolio.png" id="add-right-block" @click="openModalToAdd('right')" />
+              <img src="/add_portfolio.png" id="add-right-block" @click="openModalToAdd('right')" />
             </div>
         </div>
  

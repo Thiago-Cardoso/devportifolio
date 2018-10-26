@@ -29,7 +29,7 @@
         <button type="button" class="btn" id="add-education" @click="submit()">Adicionar</button>
       </div>
     </div>
-
+ 
     <div v-for="education in educations" class="row resource-list" :key="education.title">
       <div class="col l12 m12 s12">
         <div class="row resource-item resource-education">
@@ -44,21 +44,21 @@
     </div>
   </div>
 </template>
-
-
+ 
+ 
 <script>
-
+ 
 export default {
   props: ['portfolioId'],
-
+ 
   data() {
     return {
       education: { },
       educations: []
     }
   },
-
-
+ 
+ 
   created(){
     this.$resource('/portfolios{/id}/educations').get({ id: this.portfolioId })
         .then(response => {
@@ -67,8 +67,8 @@ export default {
           M.toast({ html: "Ocorreu um erro ao carregar as Educações", classes: "red" })
         })
   },
-
-
+ 
+ 
   mounted() {
     let elems = document.querySelectorAll('.datepicker')
     let vue = this
@@ -81,17 +81,18 @@ export default {
        }
     });
   },
-
+ 
   methods: {
     submit() {
       this.$resource('/portfolios{/id}/educations').save({ id: this.portfolioId }, { education: this.education })
           .then(response => {
             this.educations.push(response.body.resource)
+            this.education = {};
           }, response => {
             response.body.errors.forEach(error => { M.toast({ html: error, classes: "red" }) })
           })
     },
-
+ 
     removeEducation(education){
       this.$resource('/portfolios{/portfolioId}/educations{/id}').remove({ portfolioId: this.portfolioId, id: education.id })
           .then(response => {
@@ -103,5 +104,5 @@ export default {
     }
   }
 }
-
+ 
 </script>
