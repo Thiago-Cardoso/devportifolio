@@ -8,7 +8,7 @@ module PortfolioHelper
     if portfolio.profile.present? && portfolio.profile.photo.attached?
       image_url = url_for(portfolio.profile.photo.variant(resize: "150x150"))
     end
-    image_url ||= "avatars/#{portfolio.temp_avatar}"
+    image_url ||= "/avatars/#{portfolio.temp_avatar}.png"
     image_tag image_url,  class: 'responsive-img'
   end
  

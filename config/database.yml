@@ -4,7 +4,6 @@ default: &default
   host: db
   username: postgres
   password: postgres
-
 development:
   <<: *default
   database: portfolio_onebitcodet_development
