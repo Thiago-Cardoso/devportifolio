@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'payments/index'
+  get 'payments/create'
   get 'search/index'
   root 'pages#home'
   devise_for :users
@@ -7,6 +9,9 @@ Rails.application.routes.draw do
   resources :contact_forms, only: [:create]
  
   resources :portfolios, except: :new do
+    member do
+      resources :payments, only: [:index, :create]
+    end
     resources :tags, only: [:create, :destroy], param: :tag_id, controller: :portfolio_tags
     resources :blocks, only: [:index, :create, :destroy] do
       resources :additional_informations, only: [:index, :update]

@@ -8,6 +8,8 @@ class Portfolio < ApplicationRecord
   belongs_to :user
   has_one :profile
 
+  has_one :order
+
   has_one :profile, :dependent => :destroy
   has_one :about, :dependent => :destroy
  
